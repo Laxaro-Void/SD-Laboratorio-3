@@ -1,0 +1,37 @@
+=== REPORTE FINAL: DISTRIEATS ===
+[ESTADO GLOBAL DE PEDIDOS - Divergencia Detectada]
+Pedido ID: Ped-M-001 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:0, DN3:1]
+Pedido ID: Ped-M-002 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:1, DN3:0]
+Pedido ID: Ped-M-003 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Ped-M-004 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:0, DN3:1]
+Pedido ID: Ped-M-005 | Estado Final: Entregado | Reloj Vectorial: [DN1:5, DN2:1, DN3:1]
+Pedido ID: Ped-M-006 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Ped-M-007 | Estado Final: Entregado | Reloj Vectorial: [DN1:5, DN2:0, DN3:0]
+Pedido ID: Ped-M-008 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Ped-M-009 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Ped-M-010 | Estado Final: Cancelado | Reloj Vectorial: [DN1:3, DN2:1, DN3:1]
+Pedido ID: Ped-M-011 | Estado Final: Entregado | Reloj Vectorial: [DN1:5, DN2:0, DN3:1]
+Pedido ID: Ped-M-012 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Ped-M-013 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Ped-M-014 | Estado Final: Entregado | Reloj Vectorial: [DN1:5, DN2:0, DN3:1]
+Pedido ID: Ped-M-015 | Estado Final: Entregado | Reloj Vectorial: [DN1:5, DN2:1, DN3:0]
+Pedido ID: Ped-M-016 | Estado Final: Entregado | Reloj Vectorial: [DN1:5, DN2:1, DN3:0]
+Pedido ID: Ped-M-017 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:0, DN3:1]
+Pedido ID: Ped-M-018 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Ped-M-019 | Estado Final: Entregado | Reloj Vectorial: [DN1:5, DN2:1, DN3:0]
+Pedido ID: Ped-M-020 | Estado Final: En Camino | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Ped-M-021 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Ped-M-022 | Estado Final: Cancelado | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Ped-M-023 | Estado Final: Entregado | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Ped-M-024 | Estado Final: En Camino | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Ped-M-025 | Estado Final: Cancelado | Reloj Vectorial: [DN1:4, DN2:1, DN3:1]
+Pedido ID: Req-Cliente1-1 | Estado Final: Recibido | Reloj Vectorial: [DN1:0, DN2:0, DN3:1]
+Pedido ID: Req-Cliente1-2 | Estado Final: Recibido | Reloj Vectorial: [DN1:0, DN2:1, DN3:0]
+Pedido ID: Req-Cliente1-3 | Estado Final: Recibido | Reloj Vectorial: [DN1:0, DN2:1, DN3:0]
+[AUDITORIA READ YOUR WRITES]
+- Cliente1 (Req-Cliente1-1): Validacion Exitosa en Datanode 1 (Afinidad de sesion confirmada).
+- Cliente1 (Menu-Inicial): Validacion Exitosa en Datanode 1 (Afinidad de sesion confirmada).
+- Cliente1 (Req-Cliente1-2): Validacion Exitosa en Datanode 2 (Afinidad de sesion confirmada).
+- Cliente1 (Menu-Inicial): Validacion Exitosa en Datanode 2 (Afinidad de sesion confirmada).
+- Cliente1 (Req-Cliente1-3): Validacion Exitosa en Datanode 2 (Afinidad de sesion confirmada).
+=================================

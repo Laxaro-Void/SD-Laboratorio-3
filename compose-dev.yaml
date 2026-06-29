@@ -1,0 +1,113 @@
+services:
+  broker:
+    build:
+      context: .
+      dockerfile: Broker/dockerfile
+    container_name: broker
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./output:/app/output
+    environment:
+      - "NAME=Broker"
+      - "PORT=5000"
+      - "DATANODES=datanode1:5006,datanode2:5007,datanode3:5008"
+
+  gateway:
+    build:
+      context: .
+      dockerfile: Gateway/dockerfile
+    container_name: gateway
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./output:/app/output
+    environment:
+      - "NAME=Gateway"
+      - "PORT=5001"
+      - "BROKER_ADDR=broker:5000"
+      - "DATANODES=datanode1:5006,datanode2:5007,datanode3:5008"
+
+  productor:
+    build:
+      context: .
+      dockerfile: Productor/dockerfile
+    container_name: productor
+    volumes:
+      - ./Productor/input:/app/input
+    environment:
+      - "NAME=Productor"
+      - "BROKER_ADDR=broker:5000"
+      - "INPUT_FILE=input/pedidos_mediano.csv"
+
+  cliente1:
+    build:
+      context: .
+      dockerfile: Cliente/dockerfile
+    container_name: cliente1
+    environment:
+      - "NAME=Cliente1"
+      - "GATEWAY_ADDR=gateway:5001"
+
+  cliente2:
+    build:
+      context: .
+      dockerfile: Cliente/dockerfile
+    container_name: cliente2
+    environment:
+      - "NAME=Cliente2"
+      - "GATEWAY_ADDR=gateway:5001"
+
+  cliente3:
+    build:
+      context: .
+      dockerfile: Cliente/dockerfile
+    container_name: cliente3
+    environment:
+      - "NAME=Cliente3"
+      - "GATEWAY_ADDR=gateway:5001"
+
+  datanode1:
+    build:
+      context: .
+      dockerfile: Datanode/dockerfile
+    container_name: datanode1
+    ports: 
+      - "5006:5006"
+    volumes:
+      - ./output:/app/output
+    environment:
+      - "NAME=Datanode1"
+      - "PORT=5006"
+      - "INDEX=0"
+      - "PEERS=datanode2:5007,datanode3:5008"
+
+  datanode2:
+    build:
+      context: .
+      dockerfile: Datanode/dockerfile
+    container_name: datanode2
+    ports: 
+      - "5007:5007"
+    volumes:
+      - ./output:/app/output
+    environment:
+      - "NAME=Datanode2"
+      - "PORT=5007"
+      - "INDEX=1"
+      - "PEERS=datanode1:5006,datanode3:5008"
+
+  datanode3:
+    build:
+      context: .
+      dockerfile: Datanode/dockerfile
+    container_name: datanode3
+    ports: 
+      - "5008:5008"
+    volumes:
+      - ./output:/app/output
+    environment:
+      - "NAME=Datanode3"
+      - "PORT=5008"
+      - "INDEX=2"
+      - "PEERS=datanode1:5006,datanode2:5007"

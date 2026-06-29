@@ -1,0 +1,5 @@
+- Cliente1 (Req-Cliente1-1): Validacion Exitosa en Datanode 1 (Afinidad de sesion confirmada).
+- Cliente1 (Menu-Inicial): Validacion Exitosa en Datanode 1 (Afinidad de sesion confirmada).
+- Cliente1 (Req-Cliente1-2): Validacion Exitosa en Datanode 2 (Afinidad de sesion confirmada).
+- Cliente1 (Menu-Inicial): Validacion Exitosa en Datanode 2 (Afinidad de sesion confirmada).
+- Cliente1 (Req-Cliente1-3): Validacion Exitosa en Datanode 2 (Afinidad de sesion confirmada).
