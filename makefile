@@ -13,18 +13,22 @@ tidy-all:
 # Máquinas Virtuales
 # MV1: Broker Central / Productor de Eventos
 docker-VM1:
+	sudo docker system prune -f
 	sudo docker-compose -f compose.yaml up --build broker productor
 
 # MV2: Gateway de Pedidos / Cliente Hambriento 1 / Datanode 1
 docker-VM2:
+	sudo docker system prune -f
 	sudo docker-compose -f compose.yaml up --build gateway cliente1 datanode1
 
 # MV3: Cliente Hambriento 2 / Datanode 2
 docker-VM3:
+	sudo docker system prune -f
 	sudo docker-compose -f compose.yaml up --build cliente2 datanode2
 
 # MV4: Cliente Hambriento 3 / Datanode 3
 docker-VM4:
+	sudo docker system prune -f
 	sudo docker-compose -f compose.yaml up --build cliente3 datanode3
 
 
